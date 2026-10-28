@@ -1,0 +1,95 @@
+{
+  "model": "google/gemma-2b@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "decode_contexts": {
+    "capacity": 8088,
+    "contexts": [
+      128,
+      1024,
+      4096,
+      8000
+    ],
+    "inductor": {
+      "128": {
+        "complete_call_us": 7967.829704284668,
+        "pipelined_call_us": 7604.081556200981
+      },
+      "1024": {
+        "complete_call_us": 8063.996210694313,
+        "pipelined_call_us": 7668.053545057774
+      },
+      "4096": {
+        "complete_call_us": 7916.850969195366,
+        "pipelined_call_us": 7693.636231124401
+      },
+      "8000": {
+        "complete_call_us": 8879.661560058594,
+        "pipelined_call_us": 8511.921763420105
+      }
+    },
+    "inductor_cudagraphs": {
+      "128": {
+        "complete_call_us": 8941.885083913803,
+        "pipelined_call_us": 7825.546432286501
+      },
+      "1024": {
+        "complete_call_us": 8701.19035243988,
+        "pipelined_call_us": 7915.027346462011
+      },
+      "4096": {
+        "complete_call_us": 8945.947512984276,
+        "pipelined_call_us": 7918.722368776798
+      },
+      "8000": {
+        "complete_call_us": 9205.056354403496,
+        "pipelined_call_us": 8637.239784002304
+      }
+    },
+    "inductor_graphed": {
+      "128": {
+        "complete_call_us": 6426.569074392319,
+        "pipelined_call_us": 6415.5918546020985
+      },
+      "1024": {
+        "complete_call_us": 6419.522687792778,
+        "pipelined_call_us": 6412.467360496521
+      },
+      "4096": {
+        "complete_call_us": 6409.799680113792,
+        "pipelined_call_us": 6400.759052485228
+      },
+      "8000": {
+        "complete_call_us": 6397.346034646034,
+        "pipelined_call_us": 6387.772597372532
+      }
+    },
+    "megabake_graphed": {
+      "128": {
+        "complete_call_us": 3505.0716251134872,
+        "pipelined_call_us": 3474.8120233416557
+      },
+      "1024": {
+        "complete_call_us": 3759.6095353364944,
+        "pipelined_call_us": 3737.2934632003307
+      },
+      "4096": {
+        "complete_call_us": 4952.827468514442,
+        "pipelined_call_us": 4928.3393658697605
+      },
+      "8000": {
+        "complete_call_us": 6449.254229664803,
+        "pipelined_call_us": 6426.224019378424
+      }
+    }
+  },
+  "published": {
+    "artifact": "graphed_contexts_2026-10-24/google--gemma-2b",
+    "measured_at": "2026-10-24 19:22 UTC",
+    "megabake_commit": "8b94b7c"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "model": "jukofyork/DeepSeek-V3-DRAFT-0.6B-v3.0@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "eager": {
+      "complete_call_us": 22379.446774721146,
+      "device_span_us": 22356.911659240723,
+      "first_call_s": 0.02797108143568039,
+      "launch_count": 1164,
+      "kernel_duration_us": 2574.819
+    },
+    "inductor": {
+      "complete_call_us": 4618.012346327305,
+      "device_span_us": 4598.063945770264,
+      "first_call_s": 20.86023727990687,
+      "launch_count": 410,
+      "kernel_duration_us": 1376.084
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 2272.610552608967,
+      "device_span_us": 2251.1839866638184,
+      "first_call_s": 19.28723395988345,
+      "launch_count": 411,
+      "kernel_duration_us": 1418.314
+    },
+    "megabake": {
+      "complete_call_us": 2450.1224979758263,
+      "device_span_us": 2429.6799898147583,
+      "first_call_s": 27.88070704601705,
+      "launch_count": 1,
+      "kernel_duration_us": 1586.592
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "eager": {
+      "complete_call_us": 25191.466324031353,
+      "device_span_us": 25167.55199432373,
+      "pipelined_call_us": 24814.756074920297,
+      "first_call_s": 0.03155004419386387,
+      "launch_count": 1132,
+      "kernel_duration_us": 2470.641,
+      "final_position": 87
+    },
+    "inductor": {
+      "complete_call_us": 11551.213450729847,
+      "device_span_us": 11530.576229095459,
+      "pipelined_call_us": 11314.312322065234,
+      "first_call_s": 18.44843301549554,
+      "launch_count": 506,
+      "kernel_duration_us": 1625.2640000000001,
+      "final_position": 87
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 11265.677399933338,
+      "device_span_us": 11244.560241699219,
+      "pipelined_call_us": 11033.668089658022,
+      "first_call_s": 13.86057323589921,
+      "launch_count": 506,
+      "kernel_duration_us": 1628.154,
+      "final_position": 87
+    },
+    "megabake": {
+      "complete_call_us": 2542.204223573208,
+      "device_span_us": 2520.3840732574463,
+      "pipelined_call_us": 1594.6410596370697,
+      "first_call_s": 22.164737831801176,
+      "launch_count": 1,
+      "kernel_duration_us": 1588.296,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "full_model/jukofyork--DeepSeek-V3-DRAFT-0.6B-v3.0",
+    "measured_at": "2026-10-17 13:48 UTC",
+    "megabake_commit": "e96e83f"
+  }
+}

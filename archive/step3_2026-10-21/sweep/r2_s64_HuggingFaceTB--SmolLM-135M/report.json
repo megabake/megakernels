@@ -1,0 +1,26 @@
+{
+  "model": "HuggingFaceTB/SmolLM-135M@1d461723eec654e65efdc40cf49301c89c0c92f4",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "decode": {
+    "capacity": 128,
+    "megabake": {
+      "complete_call_us": 1712.7357423305511,
+      "device_span_us": 1696.016013622284,
+      "pipelined_call_us": 1082.6967656612396,
+      "first_call_s": 20.476239446550608,
+      "launch_count": 1,
+      "kernel_duration_us": 1078.533,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "step3_2026-10-21/sweep/r2_s64_HuggingFaceTB--SmolLM-135M",
+    "measured_at": "2026-10-21 15:52 UTC",
+    "megabake_commit": "c2b4d57"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "model": "google/gemma-3-270m@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention",
+    "sliding_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "megabake": {
+      "complete_call_us": 2256.6281259059906,
+      "device_span_us": 2238.592028617859,
+      "first_call_s": 49.88871427252889,
+      "launch_count": 1,
+      "kernel_duration_us": 1574.361
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "megabake": {
+      "complete_call_us": 2510.782331228256,
+      "device_span_us": 2488.5919094085693,
+      "pipelined_call_us": 1828.0083313584328,
+      "first_call_s": 37.950025483965874,
+      "launch_count": 1,
+      "kernel_duration_us": 1821.479,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "step3_2026-10-21/ab_models/r2_s64_google--gemma-3-270m",
+    "measured_at": "2026-10-21 17:02 UTC",
+    "megabake_commit": "c2b4d57"
+  }
+}

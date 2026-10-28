@@ -1,0 +1,84 @@
+{
+  "model": "google/gemma-2b@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "eager": {
+      "complete_call_us": 16377.352178096771,
+      "device_span_us": 16356.080055236816,
+      "first_call_s": 0.023132700473070145,
+      "launch_count": 939,
+      "kernel_duration_us": 3918.637
+    },
+    "inductor": {
+      "complete_call_us": 4055.3174912929535,
+      "device_span_us": 4033.583879470825,
+      "first_call_s": 3.2290166057646275,
+      "launch_count": 326,
+      "kernel_duration_us": 2978.11
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 3582.4421793222427,
+      "device_span_us": 3562.640070915222,
+      "first_call_s": 3.1884209364652634,
+      "launch_count": 327,
+      "kernel_duration_us": 3018.837
+    },
+    "megabake": {
+      "complete_call_us": 4060.652107000351,
+      "device_span_us": 4040.208101272583,
+      "first_call_s": 30.20082639530301,
+      "launch_count": 1,
+      "kernel_duration_us": 3341.419
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "eager": {
+      "complete_call_us": 19422.536715865135,
+      "device_span_us": 19396.032333374023,
+      "pipelined_call_us": 19276.09359845519,
+      "first_call_s": 0.02526504546403885,
+      "launch_count": 949,
+      "kernel_duration_us": 3830.274,
+      "final_position": 87
+    },
+    "inductor": {
+      "complete_call_us": 8681.129664182663,
+      "device_span_us": 8660.143852233887,
+      "pipelined_call_us": 8207.51991122961,
+      "first_call_s": 2.883373647928238,
+      "launch_count": 398,
+      "kernel_duration_us": 3106.576,
+      "final_position": 87
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 8616.222068667412,
+      "device_span_us": 8595.56770324707,
+      "pipelined_call_us": 8115.723356604576,
+      "first_call_s": 2.890662707388401,
+      "launch_count": 398,
+      "kernel_duration_us": 3102.472,
+      "final_position": 87
+    },
+    "megabake": {
+      "complete_call_us": 4306.452348828316,
+      "device_span_us": 4281.12006187439,
+      "pipelined_call_us": 3581.4376547932625,
+      "first_call_s": 22.599744156003,
+      "launch_count": 1,
+      "kernel_duration_us": 3589.826,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "full_model_2026-10-18/google--gemma-2b",
+    "measured_at": "2026-10-18 07:24 UTC",
+    "megabake_commit": "f70b54c"
+  }
+}

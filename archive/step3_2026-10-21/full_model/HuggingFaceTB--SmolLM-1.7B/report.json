@@ -1,0 +1,61 @@
+{
+  "model": "HuggingFaceTB/SmolLM-1.7B@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "inductor_cudagraphs": {
+      "complete_call_us": 2867.8886592388153,
+      "device_span_us": 2849.071979522705,
+      "first_call_s": 4.700203198939562,
+      "launch_count": 411,
+      "kernel_duration_us": 2395.125
+    },
+    "megabake": {
+      "complete_call_us": 3117.034211754799,
+      "device_span_us": 3096.8639850616455,
+      "first_call_s": 20.581474471837282,
+      "launch_count": 1,
+      "kernel_duration_us": 2457.761
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "inductor_cudagraphs": {
+      "complete_call_us": 8957.17367529869,
+      "device_span_us": 8938.704013824463,
+      "pipelined_call_us": 9108.797926455736,
+      "first_call_s": 2.640788447111845,
+      "launch_count": 458,
+      "kernel_duration_us": 2423.118,
+      "final_position": 87
+    },
+    "inductor_graphed": {
+      "complete_call_us": 3097.3143875598907,
+      "device_span_us": 3079.4559717178345,
+      "pipelined_call_us": 3015.5512504279613,
+      "first_call_s": 0.0032817982137203217,
+      "launch_count": 626,
+      "kernel_duration_us": 2712.655,
+      "final_position": 87
+    },
+    "megabake": {
+      "complete_call_us": 2904.3536633253098,
+      "device_span_us": 2883.8080167770386,
+      "pipelined_call_us": 2479.1075848042965,
+      "first_call_s": 15.946482922881842,
+      "launch_count": 1,
+      "kernel_duration_us": 2566.489,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "step3_2026-10-21/full_model/HuggingFaceTB--SmolLM-1.7B",
+    "measured_at": "2026-10-21 16:21 UTC",
+    "megabake_commit": "c2b4d57"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "model": "HuggingFaceTB/SmolLM-135M@1d461723eec654e65efdc40cf49301c89c0c92f4",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "inductor_tuned": {
+      "complete_call_us": 1838.9597535133362,
+      "device_span_us": 1822.2240209579468,
+      "first_call_s": 37.11520217359066,
+      "launch_count": 513,
+      "kernel_duration_us": 1171.487
+    },
+    "megabake": {
+      "complete_call_us": 2170.2274680137634,
+      "device_span_us": 2149.9680280685425,
+      "first_call_s": 27.193270962685347,
+      "launch_count": 1,
+      "kernel_duration_us": 1387.966
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "inductor_tuned": {
+      "error": "AcceleratorError: CUDA error: operation failed due to a previous error during capture\nSearch for `cudaErrorStreamCaptureInvalidated' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\n",
+      "final_position": 2
+    },
+    "megabake": {
+      "complete_call_us": 2243.8541054725647,
+      "device_span_us": 2222.9599952697754,
+      "pipelined_call_us": 1536.7146581411362,
+      "first_call_s": 28.653673514723778,
+      "launch_count": 1,
+      "kernel_duration_us": 1510.088,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "full_model_tuned/HuggingFaceTB--SmolLM-135M",
+    "measured_at": "2026-10-18 06:04 UTC",
+    "megabake_commit": "f70b54c"
+  }
+}

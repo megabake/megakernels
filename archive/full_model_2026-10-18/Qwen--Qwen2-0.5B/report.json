@@ -1,0 +1,84 @@
+{
+  "model": "Qwen/Qwen2-0.5B@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "eager": {
+      "complete_call_us": 19515.7527923584,
+      "device_span_us": 19495.984077453613,
+      "first_call_s": 0.03023255616426468,
+      "launch_count": 1164,
+      "kernel_duration_us": 2606.0190000000002
+    },
+    "inductor": {
+      "complete_call_us": 4834.134131669998,
+      "device_span_us": 4814.44787979126,
+      "first_call_s": 5.205920226871967,
+      "launch_count": 410,
+      "kernel_duration_us": 1399.532
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 2209.087833762169,
+      "device_span_us": 2188.8800859451294,
+      "first_call_s": 4.103113371878862,
+      "launch_count": 411,
+      "kernel_duration_us": 1463.998
+    },
+    "megabake": {
+      "complete_call_us": 2395.2722549438477,
+      "device_span_us": 2372.304081916809,
+      "first_call_s": 24.584805365651846,
+      "launch_count": 1,
+      "kernel_duration_us": 1604.509
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "eager": {
+      "complete_call_us": 23055.605590343475,
+      "device_span_us": 23035.776138305664,
+      "pipelined_call_us": 22727.23075002432,
+      "first_call_s": 0.02907070890069008,
+      "launch_count": 1132,
+      "kernel_duration_us": 2471.063,
+      "final_position": 87
+    },
+    "inductor": {
+      "complete_call_us": 10738.60190808773,
+      "device_span_us": 10719.776153564453,
+      "pipelined_call_us": 10333.151835948229,
+      "first_call_s": 5.034180331975222,
+      "launch_count": 506,
+      "kernel_duration_us": 1635.965,
+      "final_position": 87
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 10756.170377135277,
+      "device_span_us": 10735.712051391602,
+      "pipelined_call_us": 10555.011685937643,
+      "first_call_s": 3.818611763417721,
+      "launch_count": 506,
+      "kernel_duration_us": 1643.703,
+      "final_position": 87
+    },
+    "megabake": {
+      "complete_call_us": 2379.6893656253815,
+      "device_span_us": 2357.648015022278,
+      "pipelined_call_us": 1582.2434797883034,
+      "first_call_s": 19.765141647309065,
+      "launch_count": 1,
+      "kernel_duration_us": 1584.161,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "full_model_2026-10-18/Qwen--Qwen2-0.5B",
+    "measured_at": "2026-10-18 07:16 UTC",
+    "megabake_commit": "f70b54c"
+  }
+}

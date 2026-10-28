@@ -1,0 +1,95 @@
+{
+  "model": "HuggingFaceTB/SmolLM-1.7B@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "decode_contexts": {
+    "capacity": 8088,
+    "contexts": [
+      128,
+      1024,
+      4096,
+      8000
+    ],
+    "inductor": {
+      "128": {
+        "complete_call_us": 8722.743019461632,
+        "pipelined_call_us": 8784.884214401245
+      },
+      "1024": {
+        "complete_call_us": 8706.538006663322,
+        "pipelined_call_us": 8817.016426473856
+      },
+      "4096": {
+        "complete_call_us": 8850.529789924622,
+        "pipelined_call_us": 8755.087293684483
+      },
+      "8000": {
+        "complete_call_us": 8678.518235683441,
+        "pipelined_call_us": 8813.985902816057
+      }
+    },
+    "inductor_cudagraphs": {
+      "128": {
+        "complete_call_us": 7469.935342669487,
+        "pipelined_call_us": 7618.191745132208
+      },
+      "1024": {
+        "complete_call_us": 7593.026384711266,
+        "pipelined_call_us": 7628.060877323151
+      },
+      "4096": {
+        "complete_call_us": 7550.900802016258,
+        "pipelined_call_us": 7468.223758041859
+      },
+      "8000": {
+        "complete_call_us": 7666.653022170067,
+        "pipelined_call_us": 7635.8686201274395
+      }
+    },
+    "inductor_graphed": {
+      "128": {
+        "complete_call_us": 4067.4544870853424,
+        "pipelined_call_us": 4049.735702574253
+      },
+      "1024": {
+        "complete_call_us": 4063.853994011879,
+        "pipelined_call_us": 4045.3179739415646
+      },
+      "4096": {
+        "complete_call_us": 4050.1467883586884,
+        "pipelined_call_us": 4029.2680263519287
+      },
+      "8000": {
+        "complete_call_us": 4029.523581266403,
+        "pipelined_call_us": 4011.146444827318
+      }
+    },
+    "megabake_graphed": {
+      "128": {
+        "complete_call_us": 2478.061243891716,
+        "pipelined_call_us": 2485.5674244463444
+      },
+      "1024": {
+        "complete_call_us": 3368.3031797409058,
+        "pipelined_call_us": 3357.4274741113186
+      },
+      "4096": {
+        "complete_call_us": 5673.782899975777,
+        "pipelined_call_us": 5660.173296928406
+      },
+      "8000": {
+        "complete_call_us": 8571.108803153038,
+        "pipelined_call_us": 8561.7670789361
+      }
+    }
+  },
+  "published": {
+    "artifact": "graphed_contexts_2026-10-24/HuggingFaceTB--SmolLM-1.7B",
+    "measured_at": "2026-10-24 19:17 UTC",
+    "megabake_commit": "8b94b7c"
+  }
+}

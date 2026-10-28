@@ -1,0 +1,59 @@
+{
+  "model": "reflection/Beam-1.0-501B-A23B-DFlash2@main",
+  "attention": "eager",
+  "layer_types": [
+    "sliding_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "decode_contexts": {
+    "capacity": 4088,
+    "contexts": [
+      128,
+      1024,
+      2048,
+      4000
+    ],
+    "inductor_graphed": {
+      "128": {
+        "complete_call_us": 3915.8277213573456,
+        "pipelined_call_us": 3904.7081023454666
+      },
+      "1024": {
+        "complete_call_us": 3914.1885936260223,
+        "pipelined_call_us": 3904.7653786838055
+      },
+      "2048": {
+        "complete_call_us": 3912.3762398958206,
+        "pipelined_call_us": 3902.5804959237576
+      },
+      "4000": {
+        "complete_call_us": 3912.6351475715637,
+        "pipelined_call_us": 3901.3764820992947
+      }
+    },
+    "megabake_graphed": {
+      "128": {
+        "complete_call_us": 2572.210505604744,
+        "pipelined_call_us": 2557.0102967321873
+      },
+      "1024": {
+        "complete_call_us": 2855.6492179632187,
+        "pipelined_call_us": 2834.0316377580166
+      },
+      "2048": {
+        "complete_call_us": 3124.445676803589,
+        "pipelined_call_us": 3106.4839102327824
+      },
+      "4000": {
+        "complete_call_us": 3662.0590835809708,
+        "pipelined_call_us": 3645.852580666542
+      }
+    }
+  },
+  "published": {
+    "artifact": "graphed_contexts_sw_2026-10-24/reflection--Beam-1.0-501B-A23B-DFlash2",
+    "measured_at": "2026-10-24 19:28 UTC",
+    "megabake_commit": "8b94b7c"
+  }
+}

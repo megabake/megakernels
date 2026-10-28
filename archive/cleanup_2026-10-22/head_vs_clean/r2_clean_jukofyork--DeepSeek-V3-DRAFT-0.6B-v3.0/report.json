@@ -1,0 +1,36 @@
+{
+  "model": "jukofyork/DeepSeek-V3-DRAFT-0.6B-v3.0@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "megabake": {
+      "complete_call_us": 1955.3974270820618,
+      "device_span_us": 1936.2719655036926,
+      "first_call_s": 22.02052340656519,
+      "launch_count": 1,
+      "kernel_duration_us": 1295.069
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "megabake": {
+      "complete_call_us": 2050.7704466581345,
+      "device_span_us": 2031.3760042190552,
+      "pipelined_call_us": 1367.811392992735,
+      "first_call_s": 18.008846651762724,
+      "launch_count": 1,
+      "kernel_duration_us": 1345.243,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "cleanup_2026-10-22/head_vs_clean/r2_clean_jukofyork--DeepSeek-V3-DRAFT-0.6B-v3.0",
+    "measured_at": "2026-10-22 15:18 UTC",
+    "megabake_commit": "6165fc1"
+  }
+}

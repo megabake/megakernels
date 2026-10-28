@@ -1,0 +1,54 @@
+{
+  "model": "Qwen/Qwen3.5-0.8B@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention",
+    "linear_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "decode": {
+    "capacity": 128,
+    "inductor": {
+      "complete_call_us": 7691.3125813007355,
+      "device_span_us": 7671.583890914917,
+      "pipelined_call_us": 7829.553727060556,
+      "first_call_s": 25.33789899945259,
+      "launch_count": 507,
+      "kernel_duration_us": 2056.638,
+      "final_position": 87
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 7730.938494205475,
+      "device_span_us": 7711.27986907959,
+      "pipelined_call_us": 7611.0015623271465,
+      "first_call_s": 21.643006816506386,
+      "launch_count": 507,
+      "kernel_duration_us": 2051.829,
+      "final_position": 87
+    },
+    "inductor_graphed": {
+      "complete_call_us": 2512.6896798610687,
+      "device_span_us": 2495.808005332947,
+      "pipelined_call_us": 2336.200512945652,
+      "first_call_s": 0.0032208152115345,
+      "launch_count": 549,
+      "kernel_duration_us": 2138.578,
+      "final_position": 87
+    },
+    "megabake_graphed": {
+      "complete_call_us": 4630.494862794876,
+      "device_span_us": 4612.256050109863,
+      "pipelined_call_us": 4577.1402306854725,
+      "first_call_s": 0.004670616239309311,
+      "launch_count": 1,
+      "kernel_duration_us": 4586.29,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "graphed_2026-10-24/Qwen--Qwen3.5-0.8B",
+    "measured_at": "2026-10-24 18:17 UTC",
+    "megabake_commit": "8b94b7c"
+  }
+}

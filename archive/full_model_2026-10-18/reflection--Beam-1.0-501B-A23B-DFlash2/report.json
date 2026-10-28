@@ -1,0 +1,84 @@
+{
+  "model": "reflection/Beam-1.0-501B-A23B-DFlash2@main",
+  "attention": "eager",
+  "layer_types": [
+    "sliding_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "eager": {
+      "complete_call_us": 7130.404934287071,
+      "device_span_us": 7107.823848724365,
+      "first_call_s": 0.009232398122549057,
+      "launch_count": 350,
+      "kernel_duration_us": 2840.101
+    },
+    "inductor": {
+      "complete_call_us": 3029.0894210338593,
+      "device_span_us": 3007.8558921813965,
+      "first_call_s": 1.4912956058979034,
+      "launch_count": 107,
+      "kernel_duration_us": 2417.358
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 2835.4469686746597,
+      "device_span_us": 2815.5360221862793,
+      "first_call_s": 1.456125445663929,
+      "launch_count": 108,
+      "kernel_duration_us": 2426.362
+    },
+    "megabake": {
+      "complete_call_us": 3094.8780477046967,
+      "device_span_us": 3073.7119913101196,
+      "first_call_s": 13.138917613774538,
+      "launch_count": 1,
+      "kernel_duration_us": 2626.386
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "eager": {
+      "complete_call_us": 7610.635831952095,
+      "device_span_us": 7587.424039840698,
+      "pipelined_call_us": 6888.345628976822,
+      "first_call_s": 0.010016772896051407,
+      "launch_count": 344,
+      "kernel_duration_us": 2760.184,
+      "final_position": 87
+    },
+    "inductor": {
+      "complete_call_us": 4343.660548329353,
+      "device_span_us": 4321.45619392395,
+      "pipelined_call_us": 3880.4505951702595,
+      "first_call_s": 1.194984793663025,
+      "launch_count": 122,
+      "kernel_duration_us": 2462.692,
+      "final_position": 87
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 4405.353218317032,
+      "device_span_us": 4382.6398849487305,
+      "pipelined_call_us": 3858.4688678383827,
+      "first_call_s": 1.1722493693232536,
+      "launch_count": 122,
+      "kernel_duration_us": 2466.952,
+      "final_position": 87
+    },
+    "megabake": {
+      "complete_call_us": 3041.248768568039,
+      "device_span_us": 3020.4960107803345,
+      "pipelined_call_us": 2563.6499747633934,
+      "first_call_s": 8.632909644395113,
+      "launch_count": 1,
+      "kernel_duration_us": 2590.857,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "full_model_2026-10-18/reflection--Beam-1.0-501B-A23B-DFlash2",
+    "measured_at": "2026-10-18 07:26 UTC",
+    "megabake_commit": "f70b54c"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "model": "HuggingFaceTB/SmolLM-135M@1d461723eec654e65efdc40cf49301c89c0c92f4",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "eager": {
+      "complete_call_us": 25259.23866778612,
+      "device_span_us": 25237.711906433105,
+      "first_call_s": 0.03355552814900875,
+      "launch_count": 1446,
+      "kernel_duration_us": 2566.048
+    },
+    "inductor": {
+      "complete_call_us": 6172.952242195606,
+      "device_span_us": 6152.623891830444,
+      "first_call_s": 28.038367507979274,
+      "launch_count": 512,
+      "kernel_duration_us": 1074.968
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 2051.3683557510376,
+      "device_span_us": 2028.3839702606201,
+      "first_call_s": 26.349983777850866,
+      "launch_count": 513,
+      "kernel_duration_us": 1133.699
+    },
+    "megabake": {
+      "complete_call_us": 2136.913128197193,
+      "device_span_us": 2115.3119802474976,
+      "first_call_s": 132.3796481806785,
+      "launch_count": 1,
+      "kernel_duration_us": 1285.723
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "eager": {
+      "complete_call_us": 32794.06577348709,
+      "device_span_us": 32760.72120666504,
+      "pipelined_call_us": 32042.1458221972,
+      "first_call_s": 0.0545436255633831,
+      "launch_count": 1780,
+      "kernel_duration_us": 2694.318,
+      "final_position": 87
+    },
+    "inductor": {
+      "complete_call_us": 13320.676982402802,
+      "device_span_us": 13300.480365753174,
+      "pipelined_call_us": 13121.189828962088,
+      "first_call_s": 3.196455392986536,
+      "launch_count": 632,
+      "kernel_duration_us": 1386.267,
+      "final_position": 87
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 12107.102200388908,
+      "device_span_us": 12088.687896728516,
+      "pipelined_call_us": 11802.309425547719,
+      "first_call_s": 3.2049547601491213,
+      "launch_count": 632,
+      "kernel_duration_us": 1385.586,
+      "final_position": 87
+    },
+    "megabake": {
+      "complete_call_us": 2213.0319848656654,
+      "device_span_us": 2191.8399333953857,
+      "pipelined_call_us": 1550.523890182376,
+      "first_call_s": 80.05618653260171,
+      "launch_count": 1,
+      "kernel_duration_us": 1539.122,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "full_model_before/HuggingFaceTB--SmolLM-135M",
+    "measured_at": "2026-10-17 09:31 UTC",
+    "megabake_commit": "e96e83f"
+  }
+}

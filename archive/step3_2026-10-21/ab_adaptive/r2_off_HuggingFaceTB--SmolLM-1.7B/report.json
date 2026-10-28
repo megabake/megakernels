@@ -1,0 +1,36 @@
+{
+  "model": "HuggingFaceTB/SmolLM-1.7B@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "megabake": {
+      "complete_call_us": 3124.8368322849274,
+      "device_span_us": 3107.919931411743,
+      "first_call_s": 19.987646650522947,
+      "launch_count": 1,
+      "kernel_duration_us": 2501.126
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "megabake": {
+      "complete_call_us": 3025.772050023079,
+      "device_span_us": 3005.6960582733154,
+      "pipelined_call_us": 2586.0853493213654,
+      "first_call_s": 16.302194520831108,
+      "launch_count": 1,
+      "kernel_duration_us": 2668.977,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "step3_2026-10-21/ab_adaptive/r2_off_HuggingFaceTB--SmolLM-1.7B",
+    "measured_at": "2026-10-21 17:29 UTC",
+    "megabake_commit": "c2b4d57"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "model": "Qwen/Qwen2-0.5B@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "decode_contexts": {
+    "capacity": 8088,
+    "contexts": [
+      128,
+      1024,
+      4096,
+      8000
+    ],
+    "inductor": {
+      "128": {
+        "complete_call_us": 8829.634636640549,
+        "pipelined_call_us": 8825.880754739046
+      },
+      "1024": {
+        "complete_call_us": 9004.30791079998,
+        "pipelined_call_us": 8876.748755574226
+      },
+      "4096": {
+        "complete_call_us": 8900.037035346031,
+        "pipelined_call_us": 8884.934149682522
+      },
+      "8000": {
+        "complete_call_us": 9022.898972034454,
+        "pipelined_call_us": 9066.748525947332
+      }
+    },
+    "inductor_cudagraphs": {
+      "128": {
+        "complete_call_us": 9240.338578820229,
+        "pipelined_call_us": 9627.6780590415
+      },
+      "1024": {
+        "complete_call_us": 9300.7180839777,
+        "pipelined_call_us": 9451.164118945599
+      },
+      "4096": {
+        "complete_call_us": 9144.587442278862,
+        "pipelined_call_us": 9291.220735758543
+      },
+      "8000": {
+        "complete_call_us": 9298.00234735012,
+        "pipelined_call_us": 9653.00714597106
+      }
+    },
+    "inductor_graphed": {
+      "128": {
+        "complete_call_us": 4755.524918437004,
+        "pipelined_call_us": 4743.643198162317
+      },
+      "1024": {
+        "complete_call_us": 4753.259941935539,
+        "pipelined_call_us": 4739.1897067427635
+      },
+      "4096": {
+        "complete_call_us": 4739.958792924881,
+        "pipelined_call_us": 4725.180845707655
+      },
+      "8000": {
+        "complete_call_us": 4726.920276880264,
+        "pipelined_call_us": 4710.639175027609
+      }
+    },
+    "megabake_graphed": {
+      "128": {
+        "complete_call_us": 1401.7801731824875,
+        "pipelined_call_us": 1370.25136500597
+      },
+      "1024": {
+        "complete_call_us": 1666.1696135997772,
+        "pipelined_call_us": 1643.4287652373314
+      },
+      "4096": {
+        "complete_call_us": 2592.1277701854706,
+        "pipelined_call_us": 2568.603027611971
+      },
+      "8000": {
+        "complete_call_us": 3748.4802305698395,
+        "pipelined_call_us": 3724.868316203356
+      }
+    }
+  },
+  "published": {
+    "artifact": "graphed_contexts_2026-10-24/Qwen--Qwen2-0.5B",
+    "measured_at": "2026-10-24 19:19 UTC",
+    "megabake_commit": "8b94b7c"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "model": "reflection/Beam-1.0-501B-A23B-DFlash2@main",
+  "attention": "eager",
+  "layer_types": [
+    "sliding_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "megabake": {
+      "complete_call_us": 2977.0154505968094,
+      "device_span_us": 2959.648013114929,
+      "first_call_s": 14.560657642781734,
+      "launch_count": 1,
+      "kernel_duration_us": 2577.845
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "megabake": {
+      "complete_call_us": 2960.050478577614,
+      "device_span_us": 2940.111994743347,
+      "pipelined_call_us": 2515.786699950695,
+      "first_call_s": 10.95999488979578,
+      "launch_count": 1,
+      "kernel_duration_us": 2513.561,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "step3_2026-10-21/ab_models/r2_s64_reflection--Beam-1.0-501B-A23B-DFlash2",
+    "measured_at": "2026-10-21 16:57 UTC",
+    "megabake_commit": "c2b4d57"
+  }
+}

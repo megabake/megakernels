@@ -1,0 +1,26 @@
+{
+  "model": "jukofyork/DeepSeek-V3-DRAFT-0.6B-v3.0@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "decode": {
+    "capacity": 128,
+    "megabake": {
+      "complete_call_us": 2110.4440093040466,
+      "device_span_us": 2092.895984649658,
+      "pipelined_call_us": 1428.0387200415134,
+      "first_call_s": 20.212000869214535,
+      "launch_count": 1,
+      "kernel_duration_us": 1411.352,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "step3_2026-10-21/sweep_qwen/r2_s64_jukofyork--DeepSeek-V3-DRAFT-0.6B-v3.0",
+    "measured_at": "2026-10-21 17:46 UTC",
+    "megabake_commit": "c2b4d57"
+  }
+}

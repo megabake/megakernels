@@ -1,0 +1,95 @@
+{
+  "model": "jukofyork/DeepSeek-V3-DRAFT-0.6B-v3.0@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "decode_contexts": {
+    "capacity": 8088,
+    "contexts": [
+      128,
+      1024,
+      4096,
+      8000
+    ],
+    "inductor": {
+      "128": {
+        "complete_call_us": 8828.895166516304,
+        "pipelined_call_us": 8748.211711645126
+      },
+      "1024": {
+        "complete_call_us": 8676.283061504364,
+        "pipelined_call_us": 9158.102795481682
+      },
+      "4096": {
+        "complete_call_us": 8978.532627224922,
+        "pipelined_call_us": 8844.879921525717
+      },
+      "8000": {
+        "complete_call_us": 8804.49265241623,
+        "pipelined_call_us": 8847.692795097828
+      }
+    },
+    "inductor_cudagraphs": {
+      "128": {
+        "complete_call_us": 9368.16819012165,
+        "pipelined_call_us": 9425.696171820164
+      },
+      "1024": {
+        "complete_call_us": 9345.326572656631,
+        "pipelined_call_us": 9470.052551478148
+      },
+      "4096": {
+        "complete_call_us": 9464.060887694359,
+        "pipelined_call_us": 9749.444387853146
+      },
+      "8000": {
+        "complete_call_us": 9551.59030854702,
+        "pipelined_call_us": 9451.62307471037
+      }
+    },
+    "inductor_graphed": {
+      "128": {
+        "complete_call_us": 4745.384678244591,
+        "pipelined_call_us": 4729.056917130947
+      },
+      "1024": {
+        "complete_call_us": 4741.469398140907,
+        "pipelined_call_us": 4725.7778234779835
+      },
+      "4096": {
+        "complete_call_us": 4725.685343146324,
+        "pipelined_call_us": 4712.697956711054
+      },
+      "8000": {
+        "complete_call_us": 4713.566973805428,
+        "pipelined_call_us": 4699.278064072132
+      }
+    },
+    "megabake_graphed": {
+      "128": {
+        "complete_call_us": 1428.3880591392517,
+        "pipelined_call_us": 1399.2203399538994
+      },
+      "1024": {
+        "complete_call_us": 1701.9305378198624,
+        "pipelined_call_us": 1680.8617860078812
+      },
+      "4096": {
+        "complete_call_us": 2658.1473648548126,
+        "pipelined_call_us": 2631.5122842788696
+      },
+      "8000": {
+        "complete_call_us": 3856.111317873001,
+        "pipelined_call_us": 3829.697612673044
+      }
+    }
+  },
+  "published": {
+    "artifact": "graphed_contexts_2026-10-24/jukofyork--DeepSeek-V3-DRAFT-0.6B-v3.0",
+    "measured_at": "2026-10-24 19:20 UTC",
+    "megabake_commit": "8b94b7c"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "model": "reflection/Beam-1.0-501B-A23B-DFlash2@main",
+  "attention": "eager",
+  "layer_types": [
+    "sliding_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "prefill": {
+    "prompt_tokens": 4,
+    "inductor": {
+      "complete_call_us": 2874.94994699955,
+      "device_span_us": 2857.167959213257,
+      "first_call_s": 2.21139576472342,
+      "launch_count": 107,
+      "kernel_duration_us": 2420.372
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 2763.5134756565094,
+      "device_span_us": 2743.920087814331,
+      "first_call_s": 1.6409637033939362,
+      "launch_count": 108,
+      "kernel_duration_us": 2426.59
+    },
+    "megabake": {
+      "complete_call_us": 3022.013232111931,
+      "device_span_us": 3002.4479627609253,
+      "first_call_s": 13.743061151355505,
+      "launch_count": 1,
+      "kernel_duration_us": 2602.25
+    }
+  },
+  "decode": {
+    "capacity": 128,
+    "inductor": {
+      "complete_call_us": 4324.117675423622,
+      "device_span_us": 4301.919937133789,
+      "pipelined_call_us": 3965.516807511449,
+      "first_call_s": 1.2797211296856403,
+      "launch_count": 122,
+      "kernel_duration_us": 2461.344,
+      "final_position": 87
+    },
+    "inductor_cudagraphs": {
+      "complete_call_us": 4356.627352535725,
+      "device_span_us": 4335.18385887146,
+      "pipelined_call_us": 3839.61433544755,
+      "first_call_s": 1.5211051274091005,
+      "launch_count": 122,
+      "kernel_duration_us": 2456.313,
+      "final_position": 87
+    },
+    "megabake": {
+      "complete_call_us": 2969.3283140659332,
+      "device_span_us": 2944.4159269332886,
+      "pipelined_call_us": 2550.815651193261,
+      "first_call_s": 8.823672065511346,
+      "launch_count": 1,
+      "kernel_duration_us": 2581.465,
+      "final_position": 87
+    }
+  },
+  "decode_contexts": {
+    "capacity": 2136,
+    "contexts": [
+      512,
+      2048
+    ],
+    "inductor": {
+      "512": {
+        "complete_call_us": 4347.597248852253,
+        "pipelined_call_us": 4033.545544371009
+      },
+      "2048": {
+        "complete_call_us": 4302.536137402058,
+        "pipelined_call_us": 3982.021799311042
+      }
+    },
+    "inductor_cudagraphs": {
+      "512": {
+        "complete_call_us": 4279.648885130882,
+        "pipelined_call_us": 3953.2699156552553
+      },
+      "2048": {
+        "complete_call_us": 4311.601631343365,
+        "pipelined_call_us": 3931.806981563568
+      }
+    },
+    "megabake": {
+      "512": {
+        "complete_call_us": 3182.339482009411,
+        "pipelined_call_us": 2807.942684739828
+      },
+      "2048": {
+        "complete_call_us": 3803.4869357943535,
+        "pipelined_call_us": 3402.8008580207825
+      }
+    }
+  },
+  "published": {
+    "artifact": "full_model/reflection--Beam-1.0-501B-A23B-DFlash2",
+    "measured_at": "2026-10-17 17:58 UTC",
+    "megabake_commit": "bd40bf3"
+  }
+}

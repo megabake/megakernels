@@ -1,0 +1,27 @@
+{
+  "model": "Qwen/Qwen3.5-0.8B@main",
+  "attention": "eager",
+  "layer_types": [
+    "full_attention",
+    "linear_attention"
+  ],
+  "gpu": "NVIDIA H200 MIG 3g.71gb",
+  "samples": 40,
+  "decode": {
+    "capacity": 128,
+    "megabake": {
+      "complete_call_us": 5875.52972137928,
+      "device_span_us": 5856.256008148193,
+      "pipelined_call_us": 5052.548740059137,
+      "first_call_s": 254.47098836675286,
+      "launch_count": 1,
+      "kernel_duration_us": 5039.958,
+      "final_position": 87
+    }
+  },
+  "published": {
+    "artifact": "chunk4_2026-10-20/decode_pf0/Qwen--Qwen3.5-0.8B",
+    "measured_at": "2026-10-20 12:20 UTC",
+    "megabake_commit": "874c5fa"
+  }
+}
