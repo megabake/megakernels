@@ -6,23 +6,6 @@
   ],
   "gpu": "NVIDIA H200 MIG 3g.71gb",
   "samples": 40,
-  "prefill": {
-    "prompt_tokens": 4,
-    "inductor_cudagraphs": {
-      "complete_call_us": 1790.5719578266144,
-      "device_span_us": 1774.0319967269897,
-      "first_call_s": 25.651512045413256,
-      "launch_count": 513,
-      "kernel_duration_us": 1125.359
-    },
-    "megabake": {
-      "complete_call_us": 2174.8878061771393,
-      "device_span_us": 2154.5920372009277,
-      "first_call_s": 27.121414240449667,
-      "launch_count": 1,
-      "kernel_duration_us": 1400.029
-    }
-  },
   "decode": {
     "capacity": 128,
     "inductor_cudagraphs": {
