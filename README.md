@@ -6,8 +6,6 @@ CUDA kernel (CuTe DSL).
 
 ## Results
 
-Only kernels faster than torch.compile + CUDA graph are published, best first.
-
 | Model | Hardware | MegaBake (µs) | torch.compile + CUDA graph (µs) | Speedup | Launches | Kernel | Measured |
 | --- | --- | ---: | ---: | ---: | ---: | --- | --- |
 | [HuggingFaceTB/SmolLM-135M](https://huggingface.co/HuggingFaceTB/SmolLM-135M) | NVIDIA H200 MIG 3g.71gb | 1,097 | 2,292 | 2.09× | 842 → 1 | [decode](kernels/HuggingFaceTB--SmolLM-135M/nvidia-h200-mig-3g-71gb/decode) | 2026-10-24 |
